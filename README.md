@@ -1,5 +1,37 @@
 ### 瓦力
 
+AddressModal,
+	ResultModal,
+	Msg,
+	NoticeModal,
+	Loading,
+	AddressPicker,
+	validate,
+	Message,
+	Modal,
+	htmlFactory: {
+		createDom,
+		removeDom,
+		combineDomByClass,
+		inlineStyle
+	},
+	tools: {
+		isPC,
+		isObject,
+		countDown,
+		dormancyFor,
+		fixpx,
+		setEmBase
+	},
+	regionsDataFormat: {
+		formatWheelsData,
+		getPositionByDefaultValue
+	},
+	webAnimation: {
+		onceTransitionEnd,
+		onceAnimationEnd
+	}
+
 ```javascript
     import {
         /**
