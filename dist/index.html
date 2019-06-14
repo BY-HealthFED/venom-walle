@@ -1,0 +1,139 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Demo</title><script src="http://by-health-cdn.oss-cn-beijing.aliyuncs.com/region/regions.js"></script><script src="./themedata.js"></script><style>#wrap{width:100%}button{width:100%;height:3em;background-color:green;color:#fff;border:none;margin-bottom:10px}.parent{float:left;width:100px;height:100px;position:relative}.parentbox{width:300px;margin:0 auto 20px auto}</style></head><body><div id="wrap"></div><button onclick="address.showModal(data => console.log('提交地址弹窗', data), 
+      () => console.log('关闭地址弹窗'));">填写收货人地址</button> <button onclick="falied.showModal({
+      prizeName: '谢谢参与', 
+      prizeAlias: '别名', 
+      awardMsg: '获奖感言', 
+      prizeImg: '奖品图片', 
+      memo: '奖品备注'}).then(() => console.log('falied Go!'));">失败弹窗模块</button> <button onclick="success.showModal({
+      prizeName: '蛋白粉', 
+      prizeAlias: '别名', 
+      awardMsg: '获奖感言', 
+      prizeImg: '奖品图片', 
+      memo: '奖品备注'}).then(() => console.log('success Go!'));">成功弹窗模块</button> <button onclick="notice.showModal({
+        title: '对不起', 
+        content: '文本内容',
+      }, () => console.log('关闭消息弹窗')).then(() => console.log('notice Go!'));">消息弹窗</button> <button onclick='message.create("这是弱提示！")'>弱提示</button> <button onclick="showLoading()">loading</button><div class="parentbox clearfix"><div id="parentId1" class="parent"></div><div id="parentId2" class="parent"></div><div id="parentId3" class="parent"></div></div><script type="text/javascript" src="./walle.js?2797715610f39ef48ae2"></script></body><script>var AddressModal = ___WALLE___.AddressModal;
+        var ResultModal = ___WALLE___.ResultModal;
+        var NoticeModal = ___WALLE___.NoticeModal;
+        var Msg = ___WALLE___.Msg;
+        var Loading = ___WALLE___.Loading;
+        var timer = null;
+        var popularCities = [
+            {name: '北京', id: ['12', '1210']},
+            {name: '上海', id: ['34', '3410']},
+            {name: '广州', id: ['15', '1513']}
+        ];
+        // 收获地址模块
+        var address = new AddressModal({
+          AddressModalTheme: window.themedata.AddressModalTheme, // 弹窗皮肤
+          outerFrameId: 'wrap', // 弹窗所属父级ID
+          MessageTheme: window.themedata.MessageTheme,
+          playerPhone: 13111121112,
+          receiverInfo: {
+            idCard: 123123123123123123,
+            address: '省市区详细地址',
+            regionName: ['广东省','广州市','天河区'],
+            region: ['15', '1513', '151315'],
+            receiverPhone: 13555555555,
+            receiverName: 'name'
+          },
+          AddressPicker: {
+            popularCities
+          },
+          cardIdRequest: 1, // 1 隐藏身份证，2 验证身份证，3 身份证为空时不验证有填写时验证，4 不验证身份证
+          checkVerificationCode: () => new Promise((resolve, reject) => {
+            resolve();
+          })
+        });
+
+        // 活动失败弹窗
+        var falied = new ResultModal({
+          style: window.themedata.FailedModalTheme, 
+          modalTitle: '很遗憾', 
+          onCancel: () => console.log('关闭失败弹窗'), 
+          onEnsure: (prize) => console.log('确定失败弹窗', prize),
+          submitText: '知道了', 
+          outerFrameId: 'wrap', // 弹窗所属父级ID
+        });
+
+        // 活动获奖弹窗
+        var success = new ResultModal({
+          style: window.themedata.SuccessModalTheme, 
+          modalTitle: '恭喜您', 
+          onCancel: () => console.log('关闭成功弹窗'), 
+          onEnsure: (prize) => console.log('确定成功弹窗', prize),
+          submitText: '知道了', 
+          outerFrameId: 'wrap', // 弹窗所属父级ID
+        });
+
+        // 消息弹窗
+        var notice = new NoticeModal(window.themedata.NoticeModalTheme, 'wrap');
+
+        // 弱提示
+        var message = new Msg(window.themedata.MessageTheme, 'wrap');
+
+        // Loading
+        var newLoading1 = new Loading({
+          size: 50, // loading大小 默认20
+          length: 50, // 由几个vertices组成默认12个
+          cycleTime: 1,
+          parentId: 'parentId1',
+          style: { // 定义样式 {overlay: 覆盖层, content: 内容区, vertices: 组成节点}
+                overlay: {
+                    backgroundColor: 'rgba(0,0,0,0)'
+                },
+                content: {
+                    backgroundColor: 'rgba(0,0,0,0)',
+                },
+                vertices: {
+                    height: '0.4em',
+                    width: '0.4em',
+                    borderRadius: '1em',
+                    backgroundColor: "green",
+                    'animation-duration': "asdd",
+                    elements: ['red','orange','blue','black', 'chocolate', 'mediumblue'],
+                    size: '20%'
+                },
+            }
+        });
+        var newLoading2 = new Loading({
+            length: 50, // 由几个vertices组成默认12个
+            cycleTime: 1,
+            parentId: 'parentId2',
+            style: { // 定义样式 {overlay: 覆盖层, content: 内容区, vertices: 组成节点}
+                vertices: {
+                    height: '0.4em',
+                    width: '0.4em',
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                    size: '20%'
+                },
+            }
+        });
+        var newLoading3 = new Loading({
+            parentId: 'parentId3',
+            style: { // 定义样式 {overlay: 覆盖层, content: 内容区, vertices: 组成节点}
+                content: {
+                    backgroundColor: 'rgba(0,0,0,0)',
+                },
+                vertices: {
+                    height: '0.6em',
+                    width: '2px',
+                    size: '30%'
+                },
+            }
+        });
+
+        function showLoading() {
+          window.clearTimeout(timer);
+          newLoading1.reset();
+          newLoading2.reset();
+          newLoading3.reset();
+          newLoading1.show();
+          newLoading2.show();
+          newLoading3.show();
+          timer = setTimeout(() => {
+            newLoading1.hide();
+            newLoading2.hide();
+            newLoading3.hide();
+          }, 3000);
+        }</script></html>

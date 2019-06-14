@@ -1,0 +1,248 @@
+$ui-color: #555;
+.header{
+    position:relative; z-index: 90;background-color: #21bf27; color: #fff
+}
+#headerid{
+    display: block
+}
+
+.user, .idcode, .phone, .trigger, .address, .verificationvode{
+    font-weight: normal;
+}
+
+#error {
+    color: red;
+}
+
+.addressBox {
+	margin: 0 auto;
+	border-radius: fixpx(20);
+	background-color: #fffcf7;
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    padding-bottom: .5em;
+    max-height: 10%;
+    overflow: auto;
+
+	.divide {
+		height: fixpx(40);
+		position: relative;
+		padding: 0 1.5em;
+	}
+
+}
+.top, .bottom {
+	position: absolute;
+}
+.submit{
+	font-weight: bolder;
+	font-size: 1em;
+	width: 80%;
+    height: fixpx(70);
+	border-radius: 10em;
+	user-select: none;
+	display: block;
+}
+
+.cancel {
+	position: absolute;
+	right: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.addressBox .formBox {
+	width: 90%;
+	margin: 0 auto;
+	
+	.note {
+		background-image: url(./icona.png);
+		background-repeat: no-repeat;
+		background-size: 60%;
+		background-position: center;
+		position: absolute;
+		display: block;
+		right: 0.4em;
+		top: 0.2em;
+		width: 1.9em;
+		height: 1.9em;
+	}
+
+	.noteBox {
+		width: 135%;
+		position: absolute;
+		right: -0.3em;
+		top: 2.5em;
+		font-size: 0.8em;
+		padding: 0.5em 0.8em;
+		background-color: #fff;
+		box-shadow: 0 0 fixpx(40) rgba(221,221,221,1);
+		border-radius: fixpx(10);
+		color: red;
+		line-height: 1.4em;
+		z-index: 1;
+	}
+
+	.arrowup {
+		width: 0;
+		position: absolute;
+		height: 0;
+		border: fixpx(20) solid transparent;
+		border-bottom: fixpx(20) solid #fff;
+		right: 0.8em;
+		top: -1.2em;
+	}
+
+    .submit{
+        background-color: #ccc;
+        box-shadow: 0 fixpx(2) #ccc;
+		color: #222;
+		margin: 0 auto;
+		margin-bottom: fixpx(20);
+    }
+    
+    .cancel{
+        background-color: #e8e8e8;
+        box-shadow: 0 fixpx(2) #c9c9c9;
+		color: #999;
+		margin: 0 auto;
+    }
+
+    .inpelement,
+    .trigger {
+        border: 1px solid lighten($ui-color, 40%);
+        display: inline-block;
+        width: 100%;
+        border-radius: 0.3em;
+        text-align: left;
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: fixpx(4);
+    }
+
+	h3 {
+		font-size: 1em;
+		text-align: center;
+        color: inherit;
+        padding-top: 1.5em;
+        padding-bottom: .5em;
+        margin-bottom: .3em;
+        border-bottom: 1px dashed lighten($ui-color, 40%);
+	}
+
+	h4 {
+		font-size: .7em;
+		text-align: center;
+		color: inherit;
+		margin-top: 1em;
+        margin-bottom: .6em;
+	}
+
+	.label {
+		width: 30%;
+		text-align: right;
+		float: left;
+		height: fixpx(38);
+		line-height: 2.4em;
+		font-size: 0.8em;
+		color: $ui-color;
+		margin-bottom: 1em;
+	}
+	.inp {
+		line-height: 2.3em;
+		width: 70%;
+		text-align: left;
+		float: left;
+		color: $ui-color;
+		font-size: 0.8em;
+		margin-bottom: 0.4em;
+		position: relative;
+	}
+	
+	.inphalf {
+		line-height: 2.3em;
+		width: 34%;
+		text-align: left;
+		float: left;
+		color: $ui-color;
+		font-size: 0.8em;
+		margin-bottom: 0.4em;
+		position: relative;
+	}
+	
+	.btncodedisable, .btncode {
+		box-sizing: border-box;
+		height: 2.7em;
+		display: block;
+		width: 100%;
+		border-radius: 0.3em;
+	}
+
+	.btncode {
+		background-color: #ddd;
+		border: 1px solid #ccc;
+		color: #222;
+		display: inline-block;
+		height: fixpx(60);
+		box-sizing: border-box;
+	}
+
+	.btncodedisable {
+		background-color: rgb(201, 201, 201);
+		border: 1px solid rgb(181, 181, 181);
+		color: #545454;
+		display: inline-block;
+		height: fixpx(60);
+		box-sizing: border-box;
+	}
+
+	.inphalfspace {
+		margin-left: 2%;
+	}
+    
+    input, .trigger {
+        height: fixpx(60);
+        color: $ui-color;
+    }
+
+	input,
+	textarea,
+	select {
+        color: $ui-color;
+        
+	}
+
+	textarea {
+		border: 1px solid #ffe6d7;
+		width: 95%;
+		height: 3.5em;
+	}
+
+	textarea::-webkit-input-placeholder, input::-webkit-input-placeholder{
+		color: #ccc;
+	}
+	textarea::-moz-placeholder, input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+		color: #ccc;
+	}
+	textarea:-moz-placeholder, input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+		color: #ccc;
+	}
+	textarea:-ms-input-placeholder, input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+		color: #ccc;
+	}
+
+	.button{
+		text-align: center;
+		padding-bottom: 1em;
+	}
+}
+
+
+
+
