@@ -44,364 +44,356 @@ window.themedata = {
     },
     "FailedModalTheme": {
         "overlay": {
-            "backgroundColor": "rgba(0,0,0,0.5)"
+          "backgroundColor": "rgba(0,0,0,0.5)"
         },
         "modalTitle": {
-            fontSize: "1em",
-            fontWeight: "bolder"
+          "fontSize": "1em",
+          "fontWeight": "bolder"
         },
         "content": {
-            "width": "20em",
-            "color": "#666",
-            "background-color": "#fff",
-            "background-size": "50%",
-            "padding-top": "2em",
-            "padding-bottom": "3em",
-            "backgroundImage": "url('./assets/flip/modalbg.jpg')",
-            "borderRadius": "0.64516rem"
+          "width": "18.269em",
+          "padding-top": "2em",
+          "padding-bottom": "3em",
+          "borderRadius": "0.64516rem",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152334009.jpg)",
+          "backgroundSize": "50% auto",
+          "color": "#4e4e4e"
         },
         "contentTop": {
-            "top": 0,
-            "height": "5em",
-            "width": "100%",
-            "backgroundImage": "url('./assets/flip/modaltop.png')",
-            "background-repeat": "no-repeat",
-            "background-size": "100%"
+          "top": 0,
+          "height": "5em",
+          "width": "100%",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152440501.png)",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "100% auto"
         },
         "contentBottom": {
-            "bottom": 0,
-            "height": "5em",
-            "width": "100%",
-            "backgroundImage": "url('./assets/flip/modalbottom.png')",
-            "backgroundRepeat": "no-repeat",
-            "backgroundSize": "100%",
-            "backgroundPosition": "left bottom"
+          "bottom": 0,
+          "height": "5em",
+          "width": "100%",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152556010.png)",
+          "backgroundPosition": "left bottom",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "100% auto"
         },
         "close": {
-            "backgroundImage": "url('./assets/closeb.png')",
-            "backgroundSize": "contain",
-            "backgroundRepeat": "no-repeat",
-            "width": "1.3em",
-            "height": "1.3em",
-            "top": "-2em",
-            "right": "-1.3em",
-            "zIndex": 110
+          "width": "1.3em",
+          "height": "1.3em",
+          "top": "-2em",
+          "right": "-1.3em",
+          "zIndex": 110,
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152642358.png)",
+          "backgroundSize": "100% 100%"
         },
         "submit": {
-            width: "12em",
-            height: "2.4em",
-            borderRadius: "3em",
-            boxShadow: "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
-            backgroundImage: "url(./assets/flip/buttonbg.jpg)",
-            "backgroundSize": "auto 100%",
-            "fontSize": "1em",
-            "color": "#fff",
-            "border": "none"
-        },
-        article: {
-            paddingTop: "12em",
-            position: "relative"
-        },
-        prizeAlias: {},
-		prizeName: {
-            textAlign: "center",
-            padding: "0 1em",
-            marginBottom: "0.3em"
-        },
-        "prizeImg": {
-            "top": 0,
-            "position": "absolute",
-            "marginTop": "1em",
-            "width": "8em",
-            "marginLeft": "-5.2em",
-            "left": "50%",
-            "padding": "1.2em",
-            "backgroundImage": "url(./assets/flip/prizebg.png)",
-            "backgroundSize": "100% 100%"
-        },
-        "memo": {
-            marginBottom: "1.2em",
-            fontSize: ".8em",
-            width: "100%",
-            color: "#999"
-        },
-        "modify": [
-        ]
-    },
-    "NoticeModalTheme": {
-        "overlay": {
-            "backgroundColor": "rgba(0,0,0,0.5)"
-        },
-        "content": {
-            "width": "20em",
-            "color": "#666",
-            "background-color": "#fff",
-            "background-size": "50%",
-            "padding-top": "2em",
-            "padding-bottom": "3em",
-            "backgroundImage": "url('./assets/flip/modalbg.jpg')",
-            "borderRadius": "0.64516rem"
-        },
-        "contentTop": {
-            "top": 0,
-            "height": "5em",
-            "width": "100%",
-            "backgroundImage": "url('./assets/flip/modaltop.png')",
-            "background-repeat": "no-repeat",
-            "background-size": "100%"
-        },
-        "contentBottom": {
-            "bottom": 0,
-            "height": "5em",
-            "width": "100%",
-            "backgroundImage": "url('./assets/flip/modalbottom.png')",
-            "backgroundRepeat": "no-repeat",
-            "backgroundSize": "100%",
-            "backgroundPosition": "left bottom"
-        },
-        "close": {
-            "backgroundImage": "url('./assets/closeb.png')",
-            "backgroundSize": "contain",
-            "backgroundRepeat": "no-repeat",
-            "width": "1.3em",
-            "height": "1.3em",
-            "top": "-2em",
-            "right": "-1.3em",
-            "zIndex": 110
-        },
-        "submit": {
-            width: "12em",
-            height: "2.4em",
-            borderRadius: "3em",
-            boxShadow: "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
-            backgroundImage: "url(./assets/flip/buttonbg.jpg)",
-            "backgroundSize": "auto 100%",
-            "fontSize": "1em",
-            "color": "#fff",
-            "border": "none",
-            "zIndex": 120
-        },
-        article: {
-            padding: "3em"
-        },
-        "modify": [
-        ]
-    },
-    "SuccessModalTheme": {
-        "overlay": {
-            "backgroundColor": "rgba(0,0,0,0.5)"
-        },
-        "modalTitle": {
-            fontSize: "1em",
-            fontWeight: "bolder"
-        },
-        "content": {
-            "width": "20em",
-            "color": "#666",
-            "background-color": "#fff",
-            "background-size": "50%",
-            "padding-top": "2em",
-            "padding-bottom": "3em",
-            "backgroundImage": "url('./assets/flip/modalbg.jpg')",
-            "borderRadius": "0.64516rem"
-        },
-        "contentTop": {
-            "top": 0,
-            "height": "5em",
-            "width": "100%",
-            "backgroundImage": "url('./assets/flip/modaltop.png')",
-            "background-repeat": "no-repeat",
-            "background-size": "100%"
-        },
-        "contentBottom": {
-            "bottom": 0,
-            "height": "5em",
-            "width": "100%",
-            "backgroundImage": "url('./assets/flip/modalbottom.png')",
-            "backgroundRepeat": "no-repeat",
-            "backgroundSize": "100%",
-            "backgroundPosition": "left bottom"
-        },
-        "close": {
-            "backgroundImage": "url('./assets/closeb.png')",
-            "backgroundSize": "contain",
-            "backgroundRepeat": "no-repeat",
-            "width": "1.3em",
-            "height": "1.3em",
-            "top": "-2em",
-            "right": "-1.3em",
-            "zIndex": 110
-        },
-        "submit": {
-            width: "12em",
-            height: "2.4em",
-            borderRadius: "3em",
-            boxShadow: "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
-            backgroundImage: "url(./assets/flip/buttonbg.jpg)",
-            "backgroundSize": "auto 100%",
-            "fontSize": "1em",
-            "color": "#fff",
-            "border": "none"
-        },
-        article: {
-            paddingTop: "12em",
-            position: "relative"
-        },
-        prizeAlias: {},
-		prizeName: {
-            textAlign: "center",
-            padding: "0 1em",
-            marginBottom: "0.3em"
-        },
-        "prizeImg": {
-            "top": 0,
-            "position": "absolute",
-            "marginTop": "1em",
-            "width": "8em",
-            "marginLeft": "-5.2em",
-            "left": "50%",
-            "padding": "1.2em",
-            "backgroundImage": "url(./assets/flip/prizebg.png)",
-            "backgroundSize": "100% 100%"
-        },
-        "memo": {
-            marginBottom: "1.2em",
-            fontSize: ".8em",
-            width: "100%",
-            color: "#999"
-        },
-        "modify": [
-        ]
-    },
-    "AddressModalTheme": {
-        "overlay": {
-            "backgroundColor": "rgba(0,0,0,0.5)"
-        },
-        "content": {
-            "width": "20em",
-            "color": "#666",
-            "background-color": "#fff",
-            "background-size": "50%",
-            "padding-top": "1em",
-            "padding-bottom": "1em",
-            "backgroundImage": "url('./assets/flip/modalbg.jpg')"
-        },
-        "contentTop": {
-            "top": 0,
-            "height": "5em",
-            "width": "100%",
-            "backgroundImage": "url('./assets/flip/modaltop.png')",
-            "background-repeat": "no-repeat",
-            "background-size": "100%"
-        },
-        "contentBottom": {
-            "bottom": 0,
-            "height": "5em",
-            "width": "100%",
-            "backgroundImage": "url('./assets/flip/modalbottom.png')",
-            "backgroundRepeat": "no-repeat",
-            "backgroundSize": "100%",
-            "backgroundPosition": "left bottom"
-        },
-        "header": {
-            "color": "#666",
-            "border": "none"
-        },
-        "subTitle": {
-            "color": "red"
+          "width": "12em",
+          "height": "2.4em",
+          "borderRadius": "3em",
+          "boxShadow": "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
+          "border": "none",
+          "zIndex": 120,
+          "color": "rgba(255,255,255,1)",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152744574.jpg)",
+          "backgroundSize": "auto 100%"
         },
         "article": {
-            "position": "relative",
-            "zIndex": 120
+          "paddingTop": "12em",
+          "position": "relative"
         },
-        "footer": {
-            position: "relative",
-            zIndex: 120
+        "prizeAlias": {},
+        "prizeName": {
+          "textAlign": "center",
+          "padding": "0 1em",
+          "marginBottom": "0.3em"
         },
-        "close": {
-            "backgroundImage": "url('./assets/closeb.png')",
-            "backgroundSize": "contain",
-            "backgroundRepeat": "no-repeat",
-            "width": "1.3em",
-            "height": "1.3em",
-            "top": "-2em",
-            "right": "-1.3em",
-            "zIndex": 110
+        "prizeImg": {
+          "top": 0,
+          "position": "absolute",
+          "marginTop": "1em",
+          "width": "8em",
+          "marginLeft": "-5.2em",
+          "left": "50%",
+          "boxSizing": "content-box",
+          "padding": "1.2em",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415154500464.png)",
+          "backgroundSize": "100% 100%"
         },
-        "row": {
+        "memo": {
+          "marginBottom": "1.2em",
+          "fontSize": ".8em",
+          "width": "100%",
+          "color": "#999"
         },
-        "label": {
-            "color": "#666666"
-        },
-        "input": {
-            borderRadius: "0.2em",
-            backgroundColor: "#f6f6f6",
-            boxShadow: "0 0.1em rgba(255,255,255,.97), inset 0 0.1em 0.2em rgba(129,129,129,.36)",
-            "color": "#666666",
-            "borderColor": "#b5b5b5"
-        },
-        "textarea": {
-            borderRadius: "0.2em",
-            backgroundColor: "#f6f6f6",
-            boxShadow: "0 0.1em rgba(255,255,255,.97), inset 0 0.1em 0.2em rgba(129,129,129,.36)",
-            "color": "#666666",
-            "borderColor": "#b5b5b5"
-        },
-        "codeButton": {
-            border: "none",
-            borderRadius: "1.185em",
-            backgroundImage: "url(./assets/flip/buttonbg.jpg)",
-            "backgroundRepeat": "repeat-x",
-            "backgroundSize": "auto 100%",
-            "color": "#fff",
-            "fontSize": "normal",
-            "padding": "none",
-            "height": "2.2em"
-        },
-        "codeButtonDisable": {
-            borderRadius: "1.185em",
-            "height": "2.2em"
-        },
-        "submit": {
-            width: "10.25em",
-            color: "#fff",
-            height: "2.37em",
-            borderRadius: "1.185em",
-            boxShadow: "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
-            backgroundImage: "url(./assets/flip/buttonbg.jpg)",
-            "backgroundRepeat": "repeat-x",
-            "backgroundSize": "auto 100%",
-            "fontSize": "normal"
-        },
-        "regions": {
-            "ensureBtn": {
-            },
-            "cancelBtn": {
-            },
-            "overlay": {
-            }
-        }
-    },
-    "MessageTheme": {
-        "wrap": {
-            "top": "3em"
-        },
-        "main": {
-            "backgroundColor": "rgba(255, 0, 0, 0.8)"
-        }
-    },
-    "LoadingTheme": {
+        "modify": []
+      },
+      "NoticeModalTheme": {
         "overlay": {
-            "backgroundColor": "transparent"
+          "backgroundColor": "rgba(0,0,0,0.5)"
         },
         "content": {
-            "backgroundColor": "transparent"
+          "width": "18.269em",
+          "padding-top": "2em",
+          "padding-bottom": "3em",
+          "borderRadius": "0.64516rem",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152334009.jpg)",
+          "backgroundSize": "50% auto",
+          "color": "#4e4e4e"
+        },
+        "contentTop": {
+          "top": 0,
+          "height": "5em",
+          "width": "100%",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152440501.png)",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "100% auto"
+        },
+        "contentBottom": {
+          "bottom": 0,
+          "height": "5em",
+          "width": "100%",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152556010.png)",
+          "backgroundPosition": "left bottom",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "100% auto"
+        },
+        "close": {
+          "width": "1.3em",
+          "height": "1.3em",
+          "top": "-2em",
+          "right": "-1.3em",
+          "zIndex": 110,
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152642358.png)",
+          "backgroundSize": "100% 100%"
+        },
+        "submit": {
+          "width": "12em",
+          "height": "2.4em",
+          "borderRadius": "3em",
+          "boxShadow": "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
+          "border": "none",
+          "zIndex": 120,
+          "color": "rgba(255,255,255,1)",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152744574.jpg)",
+          "backgroundSize": "auto 100%"
+        },
+        "article": {
+          "padding": "1em"
+        },
+        "modalTitle": {
+          "fontWeight": "bolder",
+          "fontSize": "1em"
+        },
+        "modify": []
+      },
+      "SuccessModalTheme": {
+        "overlay": {
+          "backgroundColor": "rgba(0,0,0,0.5)"
+        },
+        "modalTitle": {
+          "fontSize": "1em",
+          "fontWeight": "bolder"
+        },
+        "content": {
+          "width": "18.269em",
+          "padding-top": "2em",
+          "padding-bottom": "3em",
+          "borderRadius": "0.64516rem",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152334009.jpg)",
+          "backgroundSize": "50% auto"
+        },
+        "contentTop": {
+          "top": 0,
+          "height": "5em",
+          "width": "100%",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152440501.png)",
+          "background-repeat": "no-repeat",
+          "background-size": "100%"
+        },
+        "contentBottom": {
+          "bottom": 0,
+          "height": "5em",
+          "width": "100%",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152556010.png)",
+          "backgroundPosition": "left bottom",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "100% auto"
+        },
+        "close": {
+          "width": "1.3em",
+          "height": "1.3em",
+          "top": "-2em",
+          "right": "-1.3em",
+          "zIndex": 110,
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152642358.png)",
+          "backgroundSize": "100% 100%"
+        },
+        "submit": {
+          "width": "12em",
+          "height": "2.4em",
+          "borderRadius": "3em",
+          "boxShadow": "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
+          "border": "none",
+          "zIndex": 120,
+          "color": "rgba(255,255,255,1)",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152744574.jpg)",
+          "backgroundSize": "auto 100%"
+        },
+        "article": {
+          "paddingTop": "12em",
+          "position": "relative"
+        },
+        "prizeAlias": {},
+        "prizeName": {
+          "textAlign": "center",
+          "padding": "0 1em",
+          "marginBottom": "0.3em"
+        },
+        "prizeImg": {
+          "top": 0,
+          "position": "absolute",
+          "marginTop": "1em",
+          "width": "8em",
+          "marginLeft": "-5.2em",
+          "left": "50%",
+          "boxSizing": "content-box",
+          "padding": "1.2em",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415154500464.png)",
+          "backgroundSize": "100% 100%"
+        },
+        "memo": {
+          "marginBottom": "1.2em",
+          "fontSize": ".8em",
+          "width": "100%",
+          "color": "#999"
+        },
+        "modify": []
+      },
+      "AddressModalTheme": {
+        "overlay": {
+          "backgroundColor": "rgba(0,0,0,0.5)"
+        },
+        "content": {
+          "width": "18.269em",
+          "padding-top": "1em",
+          "padding-bottom": "1em",
+          "borderRadius": "0.64516rem",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152334009.jpg)",
+          "backgroundSize": "50% auto",
+          "color": "#4e4e4e"
+        },
+        "contentTop": {
+          "top": 0,
+          "height": "5em",
+          "width": "100%",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152440501.png)",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "100% auto"
+        },
+        "contentBottom": {
+          "bottom": 0,
+          "height": "2em",
+          "width": "100%",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152556010.png)",
+          "backgroundPosition": "left bottom",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "100% auto"
+        },
+        "header": {
+          "color": "#666",
+          "border": "none"
+        },
+        "article": {
+          "position": "relative",
+          "zIndex": 120
+        },
+        "footer": {
+          "position": "relative",
+          "zIndex": 120
+        },
+        "close": {
+          "width": "1.3em",
+          "height": "1.3em",
+          "top": "-2em",
+          "right": "-1.3em",
+          "zIndex": 110,
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152642358.png)",
+          "backgroundSize": "100% 100%"
+        },
+        "row": {
+          "marginBottom": "0.3em"
+        },
+        "label": {
+          "color": "#666666"
+        },
+        "input": {
+          "borderRadius": "0.2em",
+          "height": "2.66em",
+          "backgroundColor": "rgba(150, 150, 150, 0.1)",
+          "boxShadow": "0 1px rgba(255,255,255,.97), inset 0 1px 2px rgba(129,129,129,.36)",
+          "color": "#666666",
+          "border": "1px solid rgb(206, 206, 206)",
+          "boxSizing": "border-box",
+          "padding": "0 1em"
+        },
+        "textarea": {
+          "borderRadius": "0.2em",
+          "backgroundColor": "rgba(150, 150, 150, 0.1)",
+          "boxShadow": "0 0.1em rgba(255,255,255,.97), inset 0 0.1em 0.2em rgba(129,129,129,.36)",
+          "color": "#666666",
+          "borderColor": "#b5b5b5"
+        },
+        "codeButton": {
+          "border": "none",
+          "borderRadius": "1.185em",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152744574.jpg)",
+          "backgroundRepeat": "repeat-x",
+          "backgroundSize": "auto 100%",
+          "color": "#fff",
+          "fontSize": "normal",
+          "padding": "none",
+          "height": "2.2em"
+        },
+        "codeButtonDisable": {
+          "borderRadius": "1.185em",
+          "height": "2.2em"
+        },
+        "submit": {
+          "width": "12em",
+          "height": "2.4em",
+          "borderRadius": "3em",
+          "boxShadow": "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
+          "border": "none",
+          "zIndex": 120,
+          "color": "rgba(255,255,255,1)",
+          "backgroundImage": "url(http://by-health-portal2.oss-cn-beijing.aliyuncs.com/images/20190415152744574.jpg)",
+          "backgroundSize": "auto 100%"
+        },
+        "regions": {
+          "ensureBtn": {},
+          "cancelBtn": {},
+          "overlay": {}
+        }
+      },
+      "MessageTheme": {
+        "wrap": {
+          "top": "3em"
+        },
+        "main": {
+          "backgroundColor": "rgba(255, 0, 0, 1)"
+        }
+      },
+      "LoadingTheme": {
+        "overlay": {
+          "backgroundColor": "transparent"
+        },
+        "content": {
+          "backgroundColor": "transparent"
         },
         "vertices": {
-            "backgroundColor": "#8bc34a",
-            "width": ".4em",
-            "height": ".4em"
-        },
-        verticesColors: ['red', 'green', 'blue', 'yellow', 'orange']
-    }
+          "backgroundColor": "#8bc34a",
+          "width": ".4em",
+          "height": ".4em",
+          "elements": ["red", "green", "blue", "yellow", "orange"]
+        }
+      }
 };

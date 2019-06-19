@@ -3,16 +3,16 @@
       prizeName: '谢谢参与', 
       prizeAlias: '别名', 
       awardMsg: '获奖感言', 
-      prizeImg: '奖品图片', 
+      prizeImg: 'http://m.by-health.com/assets/images/2f14c57348b0353b57abf71bce5c52f7.png', 
       memo: '奖品备注'}).then(() => console.log('falied Go!'));">失败弹窗模块</button> <button onclick="success.showModal({
       prizeName: '蛋白粉', 
       prizeAlias: '别名', 
       awardMsg: '获奖感言', 
-      prizeImg: '奖品图片', 
+      prizeImg: 'http://by-health-portal-2019.oss-cn-shenzhen.aliyuncs.com/product/album/AA010102/AA010102.jpg', 
       memo: '奖品备注'}).then(() => console.log('success Go!'));">成功弹窗模块</button> <button onclick="notice.showModal({
         title: '对不起', 
         content: '文本内容',
-      }, () => console.log('关闭消息弹窗')).then(() => console.log('notice Go!'));">消息弹窗</button> <button onclick='message.create("这是弱提示！")'>弱提示</button> <button onclick="showLoading()">loading</button><div class="parentbox clearfix"><div id="parentId1" class="parent"></div><div id="parentId2" class="parent"></div><div id="parentId3" class="parent"></div></div><script type="text/javascript" src="./walle.js?a4189fb382a4f9278041"></script></body><script>var AddressModal = ___WALLE___.AddressModal;
+      }, () => console.log('关闭消息弹窗')).then(() => console.log('notice Go!'));">消息弹窗</button><div class="parentbox clearfix"><div id="parentId1" class="parent"></div><div id="parentId2" class="parent"></div><div id="parentId3" class="parent"></div></div><script type="text/javascript" src="./walle.js?85fb80afa53c739e6044"></script></body><script>var AddressModal = ___WALLE___.AddressModal;
         var ResultModal = ___WALLE___.ResultModal;
         var NoticeModal = ___WALLE___.NoticeModal;
         var Msg = ___WALLE___.Msg;
@@ -49,7 +49,7 @@
         // 活动失败弹窗
         var falied = new ResultModal({
           style: window.themedata.FailedModalTheme, 
-          modalTitle: '很遗憾', 
+          // modalTitle: '很遗憾', 
           onCancel: () => console.log('关闭失败弹窗'), 
           onEnsure: (prize) => console.log('确定失败弹窗', prize),
           submitText: '知道了', 
@@ -67,73 +67,4 @@
         });
 
         // 消息弹窗
-        var notice = new NoticeModal(window.themedata.NoticeModalTheme, 'wrap');
-
-        // 弱提示
-        var message = new Msg(window.themedata.MessageTheme, 'wrap');
-
-        // Loading
-        var newLoading1 = new Loading({
-          size: 50, // loading大小 默认20
-          length: 50, // 由几个vertices组成默认12个
-          cycleTime: 1,
-          parentId: 'parentId1',
-          style: { // 定义样式 {overlay: 覆盖层, content: 内容区, vertices: 组成节点}
-                overlay: {
-                    backgroundColor: 'rgba(0,0,0,0)'
-                },
-                content: {
-                    backgroundColor: 'rgba(0,0,0,0)',
-                },
-                vertices: {
-                    height: '0.4em',
-                    width: '0.4em',
-                    borderRadius: '1em',
-                    backgroundColor: "green",
-                    'animation-duration': "asdd",
-                    elements: ['red','orange','blue','black', 'chocolate', 'mediumblue'],
-                    size: '20%'
-                },
-            }
-        });
-        var newLoading2 = new Loading({
-            length: 50, // 由几个vertices组成默认12个
-            cycleTime: 1,
-            parentId: 'parentId2',
-            style: { // 定义样式 {overlay: 覆盖层, content: 内容区, vertices: 组成节点}
-                vertices: {
-                    height: '0.4em',
-                    width: '0.4em',
-                    backgroundColor: "rgba(255, 255, 255, 0.8)",
-                    size: '20%'
-                },
-            }
-        });
-        var newLoading3 = new Loading({
-            parentId: 'parentId3',
-            style: { // 定义样式 {overlay: 覆盖层, content: 内容区, vertices: 组成节点}
-                content: {
-                    backgroundColor: 'rgba(0,0,0,0)',
-                },
-                vertices: {
-                    height: '0.6em',
-                    width: '2px',
-                    size: '30%'
-                },
-            }
-        });
-
-        function showLoading() {
-          window.clearTimeout(timer);
-          newLoading1.reset();
-          newLoading2.reset();
-          newLoading3.reset();
-          newLoading1.show();
-          newLoading2.show();
-          newLoading3.show();
-          timer = setTimeout(() => {
-            newLoading1.hide();
-            newLoading2.hide();
-            newLoading3.hide();
-          }, 3000);
-        }</script></html>
+        var notice = new NoticeModal(window.themedata.NoticeModalTheme, 'wrap');</script></html>
