@@ -2,7 +2,11 @@
 
 walle瓦力，是抽奖游戏模块化的大管家，它始于抽奖但不止于抽奖，可应用到其他项目。
 
-安装
+> 所有通用模块样式可以高度定制 属性定义参考[style](<./Style>)
+
+#### 
+
+### 安装
 
 ```sh
 npm i @byhealth/walle -S
@@ -29,9 +33,15 @@ import {Loading, Modal, Message, AddressPicker} from '@byhealth/walle';
 - #### 地址选择 [AddressPicker](<http://www.eightfeet.cn/AddressPicker/>)
 
 
+
+
+
+
 ### 游戏模块 
 
 [demo](<./dist>)
+
+
 
 ```javascript
 import {AddressModal, ResultModal, NoticeModal, Msg } from '@byhealth/walle';
@@ -44,6 +54,10 @@ import {AddressModal, ResultModal, NoticeModal, Msg } from '@byhealth/walle';
 - #### 消息弹窗 [NoticeModal](< ./NoticeModal >) 
 
   #### ...
+
+
+
+
 
 工具包
 
