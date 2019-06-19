@@ -29,7 +29,9 @@ import {Loading, Modal, Message, AddressPicker} from '@byhealth/walle';
 - #### 地址选择 [AddressPicker](<http://www.eightfeet.cn/AddressPicker/>)
 
 
-### 游戏模块
+### 游戏模块 
+
+[demo](<./dist>)
 
 ```javascript
 import {AddressModal, ResultModal, NoticeModal, Msg } from '@byhealth/walle';
@@ -51,6 +53,7 @@ import {AddressModal, ResultModal, NoticeModal, Msg } from '@byhealth/walle';
 
 ```javascript
 {
+	validate: {...}
     htmlFactory: {
 		createDom, 
 		removeDom,
