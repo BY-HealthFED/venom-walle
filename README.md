@@ -35,11 +35,11 @@ import {Loading, Modal, Message, AddressPicker} from '@byhealth/walle';
 import {AddressModal, ResultModal, NoticeModal, Msg } from '@byhealth/walle';
 ```
 
-- #### 填写收货人地址弹窗 [AddressModal](< ./AddressModal.md />) 
+- #### 填写收货人地址弹窗 [AddressModal](< ./AddressModal >) 
 
-- #### 抽奖结果弹窗 [ResultModal](< ./ResultModal.md />)
+- #### 抽奖结果弹窗 [ResultModal](< ./ResultModal >)
 
-- #### 消息弹窗 [NoticeModal](< ./NoticeModal.md />) 
+- #### 消息弹窗 [NoticeModal](< ./NoticeModal >) 
 
   #### ...
 
