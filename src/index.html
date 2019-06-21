@@ -10,6 +10,11 @@
     <title>Demo</title>
     <script src="https://by-health-cdn.oss-cn-beijing.aliyuncs.com/region/regions.js"></script>
     <script src="./themedata.js"></script>
+    <script>
+      onerror = function(error){
+        window.alert(error);
+      }
+    </script>
     <style>
       #wrap{
         width: 100%;
@@ -38,30 +43,16 @@
   <body>
     <div id="wrap">
     </div>
-    <button onclick="address.showModal(data => console.log('提交地址弹窗', data), 
-      () => console.log('关闭地址弹窗'));">
+    <button id="btna">
       填写收货人地址
     </button>
-    <button onclick="falied.showModal({
-      prizeName: '谢谢参与', 
-      prizeAlias: '别名', 
-      awardMsg: '获奖感言', 
-      prizeImg: 'http://m.by-health.com/assets/images/2f14c57348b0353b57abf71bce5c52f7.png', 
-      memo: '奖品备注'}).then(() => console.log('falied Go!'));">
+    <button id="btnb">
         失败弹窗模块
     </button>
-    <button onclick="success.showModal({
-      prizeName: '蛋白粉', 
-      prizeAlias: '别名', 
-      awardMsg: '获奖感言', 
-      prizeImg: 'http://by-health-portal-2019.oss-cn-shenzhen.aliyuncs.com/product/album/AA010102/AA010102.jpg', 
-      memo: '奖品备注'}).then(() => console.log('success Go!'));">
+    <button id="btnc">
         成功弹窗模块
     </button>
-    <button onclick="notice.showModal({
-        title: '对不起', 
-        content: '文本内容',
-      }, () => console.log('关闭消息弹窗')).then(() => console.log('notice Go!'));">
+    <button id="btnd">
         消息弹窗
     </button>
     <div class="parentbox clearfix">
@@ -77,6 +68,42 @@
         var Msg = ___WALLE___.Msg;
         var Loading = ___WALLE___.Loading;
         var timer = null;
+
+        var btna = document.getElementById('btna');
+        var btnb = document.getElementById('btnb');
+        var btnc = document.getElementById('btnc');
+        var btnd = document.getElementById('btnd');
+
+        btna.onclick = function(){
+          address.showModal(function(){
+            console.log('提交地址弹窗', data)
+          }, 
+          function() {
+            console.log('关闭地址弹窗');
+          })
+        };
+        btnb.onclick = function(){
+          falied.showModal({
+          prizeName: '谢谢参与', 
+          prizeAlias: '别名', 
+          awardMsg: '获奖感言', 
+          prizeImg: 'http://m.by-health.com/assets/images/2f14c57348b0353b57abf71bce5c52f7.png', 
+          memo: '奖品备注'}).then(function(){console.log('falied Go!')});
+        };
+        btnc.onclick = function(){
+          success.showModal({
+            prizeName: '蛋白粉', 
+            prizeAlias: '别名', 
+            awardMsg: '获奖感言', 
+            prizeImg: 'http://by-health-portal-2019.oss-cn-shenzhen.aliyuncs.com/product/album/AA010102/AA010102.jpg', 
+            memo: '奖品备注'}).then(function(){console.log('success Go!')});
+        };
+        btnd.onclick = function(){
+          notice.showModal({
+            title: '对不起', 
+            content: '文本内容',
+          }).then(function(){console.log('notice Go!')});
+        };
         var popularCities = [
             {name: '北京', id: ['12', '1210']},
             {name: '上海', id: ['34', '3410']},
@@ -97,20 +124,21 @@
             receiverName: 'name'
           },
           AddressPicker: {
-            popularCities
+            popularCities: popularCities
           },
           cardIdRequest: 1, // 1 隐藏身份证，2 验证身份证，3 身份证为空时不验证有填写时验证，4 不验证身份证
-          checkVerificationCode: () => new Promise((resolve, reject) => {
-            resolve();
-          })
+          checkVerificationCode: function(){ return new Promise(function(resolve, reject){
+              resolve();
+            })
+          }
         });
 
         // 活动失败弹窗
         var falied = new ResultModal({
           style: window.themedata.FailedModalTheme, 
           // modalTitle: '很遗憾', 
-          onCancel: () => console.log('关闭失败弹窗'), 
-          onEnsure: (prize) => console.log('确定失败弹窗', prize),
+          onCancel: function(){console.log('关闭失败弹窗')}, 
+          onEnsure: function(prize){console.log('确定失败弹窗', prize)},
           submitText: '知道了', 
           outerFrameId: 'wrap', // 弹窗所属父级ID
         });
@@ -119,8 +147,8 @@
         var success = new ResultModal({
           style: window.themedata.SuccessModalTheme, 
           modalTitle: '恭喜您', 
-          onCancel: () => console.log('关闭成功弹窗'), 
-          onEnsure: (prize) => console.log('确定成功弹窗', prize),
+          onCancel: function(){console.log('关闭成功弹窗')}, 
+          onEnsure: function(prize){console.log('确定成功弹窗', prize)},
           submitText: '知道了', 
           outerFrameId: 'wrap', // 弹窗所属父级ID
         });

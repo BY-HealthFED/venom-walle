@@ -43,10 +43,10 @@
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
-    "@eightfeet/addresspicker": "^1.0.4",
-    "@eightfeet/loading": "^1.0.11",
-    "@eightfeet/message": "^1.0.11",
-    "@eightfeet/modal": "^1.2.1",
+    "@eightfeet/addresspicker": "^1.0.5",
+    "@eightfeet/loading": "^1.0.12",
+    "@eightfeet/message": "^1.0.12",
+    "@eightfeet/modal": "^1.2.2",
     "autoprefix": "^1.0.1",
     "babel-polyfill": "^6.26.0",
     "copy-webpack-plugin": "^5.0.3",
