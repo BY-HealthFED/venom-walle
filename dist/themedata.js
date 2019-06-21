@@ -87,6 +87,7 @@ window.themedata = {
         },
         "submit": {
           "width": "12em",
+          "fontSize": "1em",
           "height": "2.4em",
           "borderRadius": "3em",
           "boxShadow": "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
@@ -167,6 +168,7 @@ window.themedata = {
         },
         "submit": {
           "width": "12em",
+          "fontSize": "1em",
           "height": "2.4em",
           "borderRadius": "3em",
           "boxShadow": "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
@@ -230,6 +232,7 @@ window.themedata = {
         "submit": {
           "width": "12em",
           "height": "2.4em",
+          "fontSize": "1em",
           "borderRadius": "3em",
           "boxShadow": "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
           "border": "none",
@@ -360,6 +363,7 @@ window.themedata = {
         "submit": {
           "width": "12em",
           "height": "2.4em",
+          "fontSize": "1em",
           "borderRadius": "3em",
           "boxShadow": "0 3px 4px rgba(31,156,203,.53), inset 0 2px rgba(255,255,255,.7)",
           "border": "none",
