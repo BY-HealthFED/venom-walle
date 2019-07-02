@@ -189,7 +189,7 @@ class AddressModal extends Modal {
 								<div class="${s.clearfix}" ${rowStyle ? `style="${rowStyle}"`:''}>
 									<div class="${s.label}" ${labelStyle ? `style="${labelStyle}"`:''}>收货人：</div>
 									<div class="${s.inp}">
-										<input placeholder="收货人姓名" class="${s.receiver} ${s.inpelement}" type="text" ${inputStyle ? `style="${inputStyle}"`:''} />
+										<input maxlength="30" placeholder="收货人姓名" class="${s.receiver} ${s.inpelement}" type="text" ${inputStyle ? `style="${inputStyle}"`:''} />
 									</div>
 								</div><div class="${s.clearfix}" ${rowStyle ? `style="${rowStyle}"`:''}>
 									<div class="${s.label}" ${labelStyle ? `style="${labelStyle}"`:''}>收货电话：</div>
