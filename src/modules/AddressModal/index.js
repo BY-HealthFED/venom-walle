@@ -95,10 +95,11 @@ class AddressModal extends Modal {
 	 * 显示地址模块弹窗
 	 * @param {Function} submit 提交方法
 	 * @param {Function} cancel 取消方法
+	 * @param {Function} success 保存成功回调
 	 * @returns
 	 * @memberof AddressModal
 	 */
-	showModal = (submit, cancel) => {
+	showModal = (submit, cancel, success) => {
 		const {id} = this.state;
 		const modalElement = getIdDom(id);
 		const {content, subTitle, contentTop, contentBottom, header, article, footer, close, row, label, input, textarea, codeButton, codeButtonDisable, notice, noticeIcon, noticeArrow} = this.formStyle;
@@ -222,7 +223,7 @@ class AddressModal extends Modal {
 						this.dataFillback();
 					}
 				})
-				.then(() => this.handleDom(submit, cancel));
+				.then(() => this.handleDom(submit, cancel, success));
 		}
 
 		modalElement.querySelector('.address__top').innerHTML = playerDom;
@@ -232,7 +233,7 @@ class AddressModal extends Modal {
 					this.dataFillback();
 				}
 			})
-			.then(() => this.handleDom(submit, cancel));
+			.then(() => this.handleDom(submit, cancel, success));
 	}
 
 	/**
@@ -253,10 +254,10 @@ class AddressModal extends Modal {
 	 * @param {Function} cancel
 	 * @memberof AddressModal
 	 */
-	handleDom = (submit, cancel) => {
+	handleDom = (submit, cancel, success) => {
 		const {id} = this.state;
 		const modalElement = getIdDom(id);
-		modalElement.querySelector(`.${s.submit}`).onclick = () => this.handleSubmit(submit);
+		modalElement.querySelector(`.${s.submit}`).onclick = () => this.handleSubmit(submit, success);
 		modalElement.querySelector(`.${s.cancel}`).onclick = () => {
 			cancel && cancel();
 			this.hideModal();
@@ -345,7 +346,7 @@ class AddressModal extends Modal {
 	 * @returns
 	 * @memberof AddressModal
 	 */
-	handleSubmit = (submit) => {
+	handleSubmit = (submit, success) => {
 		const {id} = this.state;
 		const modalElement = getIdDom(id);
 		const idcodeDom = modalElement.querySelector(`.${s.idcode}`);
@@ -402,7 +403,16 @@ class AddressModal extends Modal {
 			this.Msg.showMsg(error);
 			return;
 		}
-		submit && submit(data);
+
+		if (submit) {
+			const next = submit(data);
+			if (next) {
+				next.then(res => {
+					success && success(res);
+					return res;
+				});
+			}
+		}
 		this.hideModal();
 	}
 }

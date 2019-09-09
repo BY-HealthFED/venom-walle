@@ -75,12 +75,15 @@
         var btnd = document.getElementById('btnd');
 
         btna.onclick = function(){
-          address.showModal(function(){
-            console.log('提交地址弹窗', data)
+          address.showModal(function(data){
+            return Promise.resolve('提交地址弹窗')
           }, 
           function() {
             console.log('关闭地址弹窗');
-          })
+          },
+          function(res) {
+            console.log('结果');
+          });
         };
         btnb.onclick = function(){
           falied.showModal({
