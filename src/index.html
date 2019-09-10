@@ -76,13 +76,17 @@
 
         btna.onclick = function(){
           address.showModal(function(data){
-            return Promise.resolve('提交地址弹窗')
+            return new Promise(resolve => {
+              setTimeout(function(){
+                resolve('提交成功');
+            }, 3000)
+            })
           }, 
           function() {
             console.log('关闭地址弹窗');
           },
-          function(res) {
-            console.log('结果');
+          function(res, data) {
+            console.log(res, data);
           });
         };
         btnb.onclick = function(){

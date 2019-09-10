@@ -405,13 +405,12 @@ class AddressModal extends Modal {
 		}
 
 		if (submit) {
-			const next = submit(data);
-			if (next) {
-				next.then(res => {
-					success && success(res);
+			Promise.resolve()
+				.then(() => submit(data))
+				.then((res) => {
+					success && success(res, data);
 					return res;
 				});
-			}
 		}
 		this.hideModal();
 	}
