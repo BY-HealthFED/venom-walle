@@ -239,7 +239,7 @@ module.exports = (env, argv) => ({
 		contentBase: path.join(__dirname, 'src'),
 		compress: true,
 		port: 9088,
-		host: '0.0.0.0',
+		host: 'localhost',
 		publicPath: '/',
 		historyApiFallback: true,
 		proxy: {

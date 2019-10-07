@@ -46,7 +46,7 @@
     "@eightfeet/addresspicker": "^1.0.5",
     "@eightfeet/loading": "^1.0.12",
     "@eightfeet/message": "^1.0.12",
-    "@eightfeet/modal": "^1.2.3",
+    "@eightfeet/modal": "^1.2.5",
     "autoprefix": "^1.0.1",
     "babel-polyfill": "^6.26.0",
     "copy-webpack-plugin": "^5.0.3",
