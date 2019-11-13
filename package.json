@@ -45,7 +45,7 @@
   "dependencies": {
     "@eightfeet/loading": "^1.0.12",
     "@eightfeet/message": "^1.0.12",
-    "@eightfeet/modal": "^1.2.5",
+    "@eightfeet/modal": "^2.0.0",
     "@eightfeet/picker": "^1.0.2",
     "autoprefix": "^1.0.1",
     "babel-polyfill": "^6.26.0",
