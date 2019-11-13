@@ -13,7 +13,7 @@ import Msg from './modules/Msg';
 import NoticeModal from './modules/NoticeModal';
 
 import Loading from '@eightfeet/loading';
-import AddressPicker from '@eightfeet/addresspicker';
+import Picker from '@eightfeet/picker';
 import validate from 'validate-by-health';
 import Message from '@eightfeet/message';
 import Modal from '@eightfeet/modal';
@@ -34,7 +34,7 @@ module.exports = {
 	Msg,
 	NoticeModal,
 	Loading,
-	AddressPicker,
+	Picker,
 	validate,
 	Message,
 	Modal,

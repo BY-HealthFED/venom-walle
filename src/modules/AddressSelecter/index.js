@@ -1,17 +1,16 @@
-import AddressPicker from '@eightfeet/addresspicker';
+import Picker from '@eightfeet/picker';
 import { formatWheelsData } from '~/utils/regionsWheelsHelper.js';
 
 // 格式化数据源为AddressPicker的数据结构
 const regions = formatWheelsData(window.BY_HEALTH_REGIONS);
 
-class AddressSelecter extends AddressPicker {
+class AddressSelecter extends Picker {
 	constructor(config){
-		console.log('data.trigger', config.trigger);
 		const operationData = {
 			title: '请选择省市区', // 设置标题
-			triggerDisplayData: true, // 是否在"触发Dom"中显示已选数据 默认false(mobile-select中默认true)
-			regions, // 原始数据
-			onConfirm(indexArr, data){
+			wheels: [{ data: regions }],
+			keyMap: { display: 'value', value: 'id', childs: 'childs' },
+			onConfirm(data){
 				const id = [];
 				const name = [];
 				for (let index = 0; index < data.length; index++) {
@@ -23,7 +22,7 @@ class AddressSelecter extends AddressPicker {
 				const triggerDom = document.querySelector(config.trigger);
 				triggerDom.setAttribute('data-id', id.join(','));
 				triggerDom.setAttribute('data-name', name.join(','));
-				console.log('this', this);
+				triggerDom.innerText = name.join(' ');
 			},
 			...config
 		};

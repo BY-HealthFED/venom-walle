@@ -329,11 +329,16 @@ class AddressModal extends Modal {
 		if (receiverPhone) {modalElement.querySelector(`.${s.phone}`).value = receiverPhone;}
 		if (address) {modalElement.querySelector(`.${s.address}`).value = address;}
 		if (region && regionName) {
-			const trigger = modalElement.querySelector(`.${s.trigger}`);
-			trigger.setAttribute('data-id', region.join(','));
-			trigger.setAttribute('data-name', regionName.join(','));
-			this.AddressPicker.upDatePicker(region,() => {});
-			trigger.innerHTML = regionName.join(' ');
+			Promise.resolve()
+				.then(() => dormancyFor(100))
+				.then(() => {
+					const trigger = modalElement.querySelector(`.${s.trigger}`);
+					trigger.setAttribute('data-id', region.join(','));
+					trigger.setAttribute('data-name', regionName.join(','));
+					console.log('region', region);
+					this.AddressPicker.updatePicker(region,() => {});
+					trigger.innerHTML = regionName.join(' ');
+				});
 		}
 		this.readyFillBack = false;
 	}
