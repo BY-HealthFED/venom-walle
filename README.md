@@ -21,7 +21,7 @@ npm i @byhealth/walle -S
 ### 底层模块
 
 ```javascript
-import {Loading, Modal, Message, AddressPicker} from '@byhealth/walle';
+import {Loading, Modal, Message, Picker} from '@byhealth/walle';
 ```
 
 - #### 页面加载 [Loading](<http://www.eightfeet.cn/Loading/>)
@@ -30,7 +30,7 @@ import {Loading, Modal, Message, AddressPicker} from '@byhealth/walle';
 
 - #### 弱提示 [Message](<http://www.eightfeet.cn/Message/>)
 
-- #### 地址选择 [AddressPicker](<http://www.eightfeet.cn/AddressPicker/>)
+- #### 选择器 [Picker](<https://github.com/eightfeet/Picker/blob/master/readme.MD>)
 
 
 
