@@ -53,9 +53,7 @@
     "inline-style-prefixer": "^5.0.3",
     "jss-camel-case": "^6.1.0",
     "node-sass-utils": "^1.1.2",
-    "validate-by-health": "^1.1.9",
-    "vconsole": "^3.2.0",
-    "web-animation-club": "^0.2.2"
+    "validate-by-health": "^1.1.9"
   },
   "browserslist": [
     "Android 2.3",
