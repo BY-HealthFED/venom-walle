@@ -229,6 +229,9 @@ AddressPicker
       "textarea": {
         输入textarea
       },
+	"subTitle": {
+	子标题
+	},
       "codeButton": {
         获取验证码按钮
       },
